@@ -14,6 +14,59 @@ export default {
     login: '登入',
     getStarted: '立即開始',
     goToDashboard: '進入控制檯',
+    market: {
+      eyebrow: '一個 Key，多款模型',
+      headline: '一個 API Key，用齊主流 AI',
+      description: '毋須月費，一次充值即可使用多款主流模型，按實際用量收費。',
+      primaryCta: '立即開始',
+      guideCta: '查看設定教學',
+      benefits: {
+        noMonthlyFee: '無月費',
+        noVpn: '免 VPN',
+        freeSetup: '免費設定協助'
+      },
+      pricing: {
+        title: '簡單透明的額度',
+        payAsYouGo: '用幾多，付幾多',
+        pay: '你支付',
+        credit: '平台額度',
+        discount: '模型用量約官方 API 價 4 折',
+        discountNote: '不同模型會按各自用量價格扣除額度',
+        toolsTitle: '適用於你常用的 AI 工具'
+      },
+      models: {
+        title: '熱門模型，隨時切換',
+        description: '一個平台接通多個品牌，寫 Code、做功課、處理工作都毋須再管理多份訂閱。',
+        oneKeyTitle: '一條 Key，統一管理',
+        oneKeyDescription: '在同一個控制檯建立 Key、查看用量和管理額度，轉模型毋須重新開帳戶。',
+        geminiSeries: 'Gemini 系列'
+      },
+      start: {
+        title: '幾分鐘就可以開始',
+        description: '流程簡單，新手亦可以跟住教學完成。遇到問題，我哋會逐步協助。',
+        register: {
+          title: '註冊帳戶',
+          description: '建立 CheapAPI 帳戶並登入控制檯。'
+        },
+        topUp: {
+          title: '充值所需額度',
+          description: '充值幾多用幾多，毋須承擔固定月費。'
+        },
+        createKey: {
+          title: '建立 API Key',
+          description: '一條 Key 即可連接多款支援模型。'
+        },
+        configure: {
+          title: '完成工具設定',
+          description: '按教學連接 Codex、Claude Code、Gemini CLI 或其他工具。'
+        }
+      },
+      help: {
+        title: '設定唔到？我哋陪你搞掂',
+        description: '落單後話我哋知你想用邊款工具，可免費獲得逐步設定及遠端協助，全程由你確認操作。'
+      },
+      footerTagline: '一個 Key，用齊主流 AI'
+    },
     // 新增：面向使用者的價值主張
     heroSubtitle: '一個金鑰，暢用多個 AI 模型',
     heroDescription: '無需管理多個訂閱賬號，一站式接入 Claude、GPT、Gemini 等主流 AI 服務',

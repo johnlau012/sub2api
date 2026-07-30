@@ -14,6 +14,59 @@ export default {
     login: 'Login',
     getStarted: 'Get Started',
     goToDashboard: 'Go to Dashboard',
+    market: {
+      eyebrow: 'One key, multiple models',
+      headline: 'One API key for the AI you use',
+      description: 'No monthly fee. Top up once, use leading models, and pay only for actual usage.',
+      primaryCta: 'Get started',
+      guideCta: 'Read setup guide',
+      benefits: {
+        noMonthlyFee: 'No monthly fee',
+        noVpn: 'No VPN required',
+        freeSetup: 'Free setup help'
+      },
+      pricing: {
+        title: 'Simple, transparent credit',
+        payAsYouGo: 'Pay as you go',
+        pay: 'You pay',
+        credit: 'Platform credit',
+        discount: 'Model usage at about 40% of official API pricing',
+        discountNote: 'Credit is deducted according to each model’s usage rate',
+        toolsTitle: 'Works with the AI tools you already use'
+      },
+      models: {
+        title: 'Popular models, ready to switch',
+        description: 'Use multiple providers for coding, study, and work without managing separate subscriptions.',
+        oneKeyTitle: 'One key, one place',
+        oneKeyDescription: 'Create keys, review usage, and manage credit in one dashboard. Switch models without opening new accounts.',
+        geminiSeries: 'Gemini series'
+      },
+      start: {
+        title: 'Start in a few minutes',
+        description: 'The setup is beginner-friendly. Follow the guide or ask us to walk through it with you.',
+        register: {
+          title: 'Create your account',
+          description: 'Register for CheapAPI and sign in to the dashboard.'
+        },
+        topUp: {
+          title: 'Add the credit you need',
+          description: 'Top up what you want to use, with no fixed monthly charge.'
+        },
+        createKey: {
+          title: 'Create an API key',
+          description: 'Use one key to connect to multiple supported models.'
+        },
+        configure: {
+          title: 'Connect your tool',
+          description: 'Follow the guide for Codex, Claude Code, Gemini CLI, or another tool.'
+        }
+      },
+      help: {
+        title: 'Need help setting it up?',
+        description: 'Tell us which tool you use after ordering. Step-by-step and remote setup help are free, with every action confirmed by you.'
+      },
+      footerTagline: 'One key for the AI you use'
+    },
     // User-focused value proposition
     heroSubtitle: 'One Key, All AI Models',
     heroDescription: 'No need to manage multiple subscriptions. Access Claude, GPT, Gemini and more with a single API key',

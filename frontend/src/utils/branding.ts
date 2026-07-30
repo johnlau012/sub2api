@@ -1,7 +1,8 @@
 import { sanitizeUrl } from '@/utils/url'
 
 export function updateFavicon(logoUrl: string): void {
-  const sanitizedLogoUrl = sanitizeUrl(logoUrl, {
+  const requestedLogoUrl = !logoUrl || logoUrl === '/logo.svg' ? '/cheapapi-logo.png' : logoUrl
+  const sanitizedLogoUrl = sanitizeUrl(requestedLogoUrl, {
     allowRelative: true,
     allowDataUrl: true,
   })
@@ -16,6 +17,10 @@ export function updateFavicon(logoUrl: string): void {
     document.head.appendChild(link)
   }
 
-  link.type = sanitizedLogoUrl.endsWith('.svg') ? 'image/svg+xml' : 'image/x-icon'
+  link.type = sanitizedLogoUrl.endsWith('.svg')
+    ? 'image/svg+xml'
+    : sanitizedLogoUrl.endsWith('.png')
+      ? 'image/png'
+      : 'image/x-icon'
   link.href = sanitizedLogoUrl
 }
