@@ -293,6 +293,10 @@ type UpdateSettingsRequest struct {
 	PaymentProductNameSuffix         *string  `json:"payment_product_name_suffix"`
 	PaymentHelpImageURL              *string  `json:"payment_help_image_url"`
 	PaymentHelpText                  *string  `json:"payment_help_text"`
+	PaymentManualTopUpPaymeURL       *string  `json:"payment_manual_top_up_payme_url"`
+	PaymentManualTopUpAlipayURL      *string  `json:"payment_manual_top_up_alipay_url"`
+	PaymentManualTopUpWechatURL      *string  `json:"payment_manual_top_up_wechat_url"`
+	PaymentManualTopUpContactURL     *string  `json:"payment_manual_top_up_contact_url"`
 
 	// Cancel rate limit
 	PaymentCancelRateLimitEnabled *bool   `json:"payment_cancel_rate_limit_enabled"`
@@ -1824,6 +1828,10 @@ func (h *SettingHandler) UpdateSettings(c *gin.Context) {
 			ProductNameSuffix:             req.PaymentProductNameSuffix,
 			HelpImageURL:                  req.PaymentHelpImageURL,
 			HelpText:                      req.PaymentHelpText,
+			ManualTopUpPaymeURL:           req.PaymentManualTopUpPaymeURL,
+			ManualTopUpAlipayURL:          req.PaymentManualTopUpAlipayURL,
+			ManualTopUpWechatURL:          req.PaymentManualTopUpWechatURL,
+			ManualTopUpContactURL:         req.PaymentManualTopUpContactURL,
 			CancelRateLimitEnabled:        req.PaymentCancelRateLimitEnabled,
 			CancelRateLimitMax:            req.PaymentCancelRateLimitMax,
 			CancelRateLimitWindow:         req.PaymentCancelRateLimitWindow,
@@ -2083,6 +2091,10 @@ func (h *SettingHandler) UpdateSettings(c *gin.Context) {
 		PaymentProductNameSuffix:                               updatedPaymentCfg.ProductNameSuffix,
 		PaymentHelpImageURL:                                    updatedPaymentCfg.HelpImageURL,
 		PaymentHelpText:                                        updatedPaymentCfg.HelpText,
+		PaymentManualTopUpPaymeURL:                             updatedPaymentCfg.ManualTopUpPaymeURL,
+		PaymentManualTopUpAlipayURL:                            updatedPaymentCfg.ManualTopUpAlipayURL,
+		PaymentManualTopUpWechatURL:                            updatedPaymentCfg.ManualTopUpWechatURL,
+		PaymentManualTopUpContactURL:                           updatedPaymentCfg.ManualTopUpContactURL,
 		PaymentCancelRateLimitEnabled:                          updatedPaymentCfg.CancelRateLimitEnabled,
 		PaymentCancelRateLimitMax:                              updatedPaymentCfg.CancelRateLimitMax,
 		PaymentCancelRateLimitWindow:                           updatedPaymentCfg.CancelRateLimitWindow,

@@ -262,6 +262,10 @@ type SystemSettings struct {
 	PaymentProductNameSuffix         string   `json:"payment_product_name_suffix"`
 	PaymentHelpImageURL              string   `json:"payment_help_image_url"`
 	PaymentHelpText                  string   `json:"payment_help_text"`
+	PaymentManualTopUpPaymeURL       string   `json:"payment_manual_top_up_payme_url"`
+	PaymentManualTopUpAlipayURL      string   `json:"payment_manual_top_up_alipay_url"`
+	PaymentManualTopUpWechatURL      string   `json:"payment_manual_top_up_wechat_url"`
+	PaymentManualTopUpContactURL     string   `json:"payment_manual_top_up_contact_url"`
 
 	// Cancel rate limit
 	PaymentCancelRateLimitEnabled bool   `json:"payment_cancel_rate_limit_enabled"`

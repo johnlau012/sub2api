@@ -33,6 +33,10 @@ const (
 	SettingProductNameSuffix             = "PRODUCT_NAME_SUFFIX"
 	SettingHelpImageURL                  = "PAYMENT_HELP_IMAGE_URL"
 	SettingHelpText                      = "PAYMENT_HELP_TEXT"
+	SettingManualTopUpPaymeURL           = "MANUAL_TOP_UP_PAYME_URL"
+	SettingManualTopUpAlipayURL          = "MANUAL_TOP_UP_ALIPAY_URL"
+	SettingManualTopUpWechatURL          = "MANUAL_TOP_UP_WECHAT_URL"
+	SettingManualTopUpContactURL         = "MANUAL_TOP_UP_CONTACT_URL"
 	SettingCancelRateLimitOn             = "CANCEL_RATE_LIMIT_ENABLED"
 	SettingCancelRateLimitMax            = "CANCEL_RATE_LIMIT_MAX"
 	SettingCancelWindowSize              = "CANCEL_RATE_LIMIT_WINDOW"
@@ -67,6 +71,10 @@ type PaymentConfig struct {
 	ProductNameSuffix        string  `json:"product_name_suffix"`
 	HelpImageURL             string  `json:"help_image_url"`
 	HelpText                 string  `json:"help_text"`
+	ManualTopUpPaymeURL      string  `json:"manual_top_up_payme_url"`
+	ManualTopUpAlipayURL     string  `json:"manual_top_up_alipay_url"`
+	ManualTopUpWechatURL     string  `json:"manual_top_up_wechat_url"`
+	ManualTopUpContactURL    string  `json:"manual_top_up_contact_url"`
 	StripePublishableKey     string  `json:"stripe_publishable_key,omitempty"`
 
 	// Cancel rate limit settings
@@ -100,6 +108,10 @@ type UpdatePaymentConfigRequest struct {
 	ProductNameSuffix         *string  `json:"product_name_suffix"`
 	HelpImageURL              *string  `json:"help_image_url"`
 	HelpText                  *string  `json:"help_text"`
+	ManualTopUpPaymeURL       *string  `json:"manual_top_up_payme_url"`
+	ManualTopUpAlipayURL      *string  `json:"manual_top_up_alipay_url"`
+	ManualTopUpWechatURL      *string  `json:"manual_top_up_wechat_url"`
+	ManualTopUpContactURL     *string  `json:"manual_top_up_contact_url"`
 
 	// Cancel rate limit settings
 	CancelRateLimitEnabled *bool   `json:"cancel_rate_limit_enabled"`
@@ -221,7 +233,7 @@ func (s *PaymentConfigService) GetPaymentConfig(ctx context.Context) (*PaymentCo
 		SettingDailyRechargeLimit, SettingOrderTimeoutMinutes, SettingMaxPendingOrders,
 		SettingEnabledPaymentTypes, SettingBalancePayDisabled, SettingBalanceRechargeMult, SettingSubscriptionUSDToCNYRate, SettingRechargeFeeRate, SettingLoadBalanceStrategy,
 		SettingProductNamePrefix, SettingProductNameSuffix,
-		SettingHelpImageURL, SettingHelpText,
+		SettingHelpImageURL, SettingHelpText, SettingManualTopUpPaymeURL, SettingManualTopUpAlipayURL, SettingManualTopUpWechatURL, SettingManualTopUpContactURL,
 		SettingCancelRateLimitOn, SettingCancelRateLimitMax,
 		SettingCancelWindowSize, SettingCancelWindowUnit, SettingCancelWindowMode,
 		SettingAlipayForceQRCode, SettingAlipayMobilePrecreateDeepLink,
@@ -255,6 +267,10 @@ func (s *PaymentConfigService) parsePaymentConfig(vals map[string]string) *Payme
 		ProductNameSuffix:         vals[SettingProductNameSuffix],
 		HelpImageURL:              vals[SettingHelpImageURL],
 		HelpText:                  vals[SettingHelpText],
+		ManualTopUpPaymeURL:       vals[SettingManualTopUpPaymeURL],
+		ManualTopUpAlipayURL:      vals[SettingManualTopUpAlipayURL],
+		ManualTopUpWechatURL:      vals[SettingManualTopUpWechatURL],
+		ManualTopUpContactURL:     vals[SettingManualTopUpContactURL],
 
 		CancelRateLimitEnabled: vals[SettingCancelRateLimitOn] == "true",
 		CancelRateLimitMax:     pcParseInt(vals[SettingCancelRateLimitMax], 10),
@@ -359,6 +375,10 @@ func (s *PaymentConfigService) UpdatePaymentConfig(ctx context.Context, req Upda
 		SettingProductNameSuffix:                 derefStr(req.ProductNameSuffix),
 		SettingHelpImageURL:                      derefStr(req.HelpImageURL),
 		SettingHelpText:                          derefStr(req.HelpText),
+		SettingManualTopUpPaymeURL:               derefStr(req.ManualTopUpPaymeURL),
+		SettingManualTopUpAlipayURL:              derefStr(req.ManualTopUpAlipayURL),
+		SettingManualTopUpWechatURL:              derefStr(req.ManualTopUpWechatURL),
+		SettingManualTopUpContactURL:             derefStr(req.ManualTopUpContactURL),
 		SettingCancelRateLimitOn:                 formatBoolOrEmpty(req.CancelRateLimitEnabled),
 		SettingCancelRateLimitMax:                formatPositiveInt(req.CancelRateLimitMax),
 		SettingCancelWindowSize:                  formatPositiveInt(req.CancelRateLimitWindow),
