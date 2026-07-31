@@ -7524,6 +7524,18 @@
                     ></textarea>
                   </div>
                 </div>
+                <div class="mt-4 border-t border-gray-100 pt-4 dark:border-dark-700">
+                  <p class="mb-3 text-sm font-semibold text-gray-900 dark:text-white">手動充值頁設定</p>
+                  <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    <ImageUpload v-model="form.payment_manual_top_up_payme_url" upload-label="上傳 PayMe QR code" remove-label="移除" placeholder="PayMe QR code" />
+                    <ImageUpload v-model="form.payment_manual_top_up_alipay_url" upload-label="上傳 Alipay QR code" remove-label="移除" placeholder="Alipay QR code" />
+                    <ImageUpload v-model="form.payment_manual_top_up_wechat_url" upload-label="上傳 WeChat Pay QR code" remove-label="移除" placeholder="WeChat Pay QR code" />
+                    <div>
+                      <label class="input-label">付款後聯絡連結</label>
+                      <input v-model="form.payment_manual_top_up_contact_url" class="input" type="url" placeholder="https://carousell.app.link/..." />
+                    </div>
+                  </div>
+                </div>
               </template>
             </div>
           </div>
@@ -8852,6 +8864,10 @@ const form = reactive<SettingsForm>({
   payment_enabled_types: [],
   payment_help_image_url: "",
   payment_help_text: "",
+  payment_manual_top_up_payme_url: "",
+  payment_manual_top_up_alipay_url: "",
+  payment_manual_top_up_wechat_url: "",
+  payment_manual_top_up_contact_url: "",
   payment_product_name_prefix: "",
   payment_product_name_suffix: "",
   payment_load_balance_strategy: "round-robin",
@@ -10529,6 +10545,10 @@ async function saveSettings() {
       payment_product_name_suffix: form.payment_product_name_suffix,
       payment_help_image_url: form.payment_help_image_url,
       payment_help_text: form.payment_help_text,
+      payment_manual_top_up_payme_url: form.payment_manual_top_up_payme_url,
+      payment_manual_top_up_alipay_url: form.payment_manual_top_up_alipay_url,
+      payment_manual_top_up_wechat_url: form.payment_manual_top_up_wechat_url,
+      payment_manual_top_up_contact_url: form.payment_manual_top_up_contact_url,
       payment_cancel_rate_limit_enabled: form.payment_cancel_rate_limit_enabled,
       payment_cancel_rate_limit_max:
         Number(form.payment_cancel_rate_limit_max) || 10,

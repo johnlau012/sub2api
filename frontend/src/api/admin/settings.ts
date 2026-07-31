@@ -605,6 +605,10 @@ export interface SystemSettings {
   payment_product_name_suffix: string;
   payment_help_image_url: string;
   payment_help_text: string;
+  payment_manual_top_up_payme_url: string;
+  payment_manual_top_up_alipay_url: string;
+  payment_manual_top_up_wechat_url: string;
+  payment_manual_top_up_contact_url: string;
   payment_cancel_rate_limit_enabled: boolean;
   payment_cancel_rate_limit_max: number;
   payment_cancel_rate_limit_window: number;
@@ -893,6 +897,10 @@ export interface UpdateSettingsRequest {
   payment_product_name_suffix?: string;
   payment_help_image_url?: string;
   payment_help_text?: string;
+  payment_manual_top_up_payme_url?: string;
+  payment_manual_top_up_alipay_url?: string;
+  payment_manual_top_up_wechat_url?: string;
+  payment_manual_top_up_contact_url?: string;
   payment_cancel_rate_limit_enabled?: boolean;
   payment_cancel_rate_limit_max?: number;
   payment_cancel_rate_limit_window?: number;
