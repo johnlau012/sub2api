@@ -202,6 +202,7 @@ export default {
 
   // Auth
   auth: {
+    brandSubtitle: '一个 API Key，使用多款 AI 模型',
     welcomeBack: '欢迎回来',
     signInToAccount: '登录您的账户以继续',
     signIn: '登录',

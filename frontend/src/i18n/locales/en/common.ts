@@ -202,6 +202,7 @@ export default {
 
   // Auth
   auth: {
+    brandSubtitle: 'One API key. Multiple AI models.',
     welcomeBack: 'Welcome Back',
     signInToAccount: 'Sign in to your account to continue',
     signIn: 'Sign In',

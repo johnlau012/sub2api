@@ -470,7 +470,7 @@ const providerItems = computed(() => [
     canUnbind: Boolean(getBindingStatus('wechat') && getBindingDetails('wechat')?.can_unbind),
     details: getBindingDetails('wechat'),
   },
-])
+].filter((item) => item.provider === 'email' || item.bound))
 
 function providerInitial(provider: UserAuthProvider): string {
   if (provider === 'linuxdo') {
