@@ -69,6 +69,22 @@ export default {
     notConfiguredDesc: '管理員已開啟入口，但尚未配置充值/訂閱連結，請聯絡管理員。'
   },
 
+  topUp: {
+    title: '入數充值',
+    description: '用 PayMe、AlipayHK 或 WeChat Pay HK 入數',
+    payMe: 'PayMe',
+    alipay: 'AlipayHK',
+    wechat: 'WeChat Pay HK',
+    scanHint: '掃描 QR Code 完成轉帳',
+    stepsTitle: '入數後 DM 我哋',
+    amount: '增值金額',
+    username: '平台註冊嘅 Username',
+    screenshot: '付款截圖',
+    dmButton: '已付款？DM 我哋',
+    dmHint: '完成轉帳後，DM 以下資料：',
+    manualNote: '確認收到款項後，我哋會幫你充值入戶口。'
+  },
+
   // Custom Page (iframe embed)
   customPage: {
     title: '自定義頁面',

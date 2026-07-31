@@ -314,6 +314,18 @@ const routes: RouteRecordRaw[] = [
     }
   },
   {
+    path: '/top-up',
+    name: 'TopUp',
+    component: () => import('@/views/user/TopUpView.vue'),
+    meta: {
+      requiresAuth: true,
+      requiresAdmin: false,
+      title: 'Top Up',
+      titleKey: 'topUp.title',
+      descriptionKey: 'topUp.description'
+    }
+  },
+  {
     path: '/orders',
     name: 'OrderList',
     component: () => import('@/views/user/UserOrdersView.vue'),

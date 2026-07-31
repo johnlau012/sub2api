@@ -183,6 +183,7 @@ export default {
     github: 'GitHub',
     mySubscriptions: '我的訂閱',
     buySubscription: '充值/訂閱',
+    topUp: '入數充值',
     docs: '文件',
     myOrders: '我的訂單',
     orderManagement: '訂單管理',

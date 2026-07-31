@@ -71,6 +71,13 @@ export default {
       'The administrator enabled the entry but has not configured a recharge/subscription URL. Please contact admin.'
   },
 
+  topUp: {
+    title: 'Top Up', description: 'Top up with PayMe, AlipayHK or WeChat Pay HK',
+    payMe: 'PayMe', alipay: 'AlipayHK', wechat: 'WeChat Pay HK', scanHint: 'Scan the QR code to transfer',
+    stepsTitle: 'DM us after payment', amount: 'Top-up amount', username: 'Platform username', screenshot: 'Payment screenshot',
+    dmButton: 'Paid? DM us', dmHint: 'After transferring, DM us:', manualNote: 'We will add the balance after confirming the payment.'
+  },
+
   // Custom Page (iframe embed)
   customPage: {
     title: 'Custom Page',

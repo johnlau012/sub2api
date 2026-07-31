@@ -183,6 +183,7 @@ export default {
     github: 'GitHub',
     mySubscriptions: 'My Subscriptions',
     buySubscription: 'Recharge / Subscription',
+    topUp: 'Top Up',
     docs: 'Docs',
     myOrders: 'My Orders',
     orderManagement: 'Orders',
